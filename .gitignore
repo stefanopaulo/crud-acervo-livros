@@ -1,0 +1,41 @@
+# --- Compilação e Binários ---
+target/
+*.class
+*.war
+*.ear
+*.jar
+
+# --- IDEs (Eclipse) ---
+.settings/
+.project
+.classpath
+.metadata/
+bin/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# --- IDEs (IntelliJ) ---
+.idea/
+*.iml
+*.iws
+out/
+
+# --- IDEs (VS Code) ---
+.vscode/
+
+# --- Sistema Operacional ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+
+# --- Pasta Temporária do Tomcat (Se estiver dentro do projeto) ---
+temp/
+work/
+
+# -- Dados de conexão ---
+src/main/resources/db.properties

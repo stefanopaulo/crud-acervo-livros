@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"br.com.biblioteca.controller"},{"l":"br.com.biblioteca.exceptions"},{"l":"br.com.biblioteca.model.dao"},{"l":"br.com.biblioteca.model.dao.impl"},{"l":"br.com.biblioteca.model.entities"},{"l":"br.com.biblioteca.model.enums"},{"l":"br.com.biblioteca.util"}];updateSearchResults();

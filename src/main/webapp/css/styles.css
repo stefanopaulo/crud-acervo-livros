@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+/* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #f8fafc;
+  background-color: #0f172a;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+/* Cabecalho */
+#cabecalho {
+  padding: 1.5rem;
+  background-color: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+#nav-links a {
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+#nav-links a:hover {
+  color: #f8fafc;
+}
+
+/* Container */
+main {
+  flex: 1;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-inicial {
+  text-align: center;
+}
+
+.container-inicial h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.container-inicial p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.botao1,
+.botao3 {
+  display: inline-block;
+  color: #fff;
+  background-color: #3b82f6;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 200px;
+  align-self: center;
+  font-size: 0.85rem;
+}
+
+.botao2,
+.botao4 {
+  display: inline-block;
+  color: #fff;
+  background-color: #ef4444;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 200px;
+  align-self: center;
+  font-size: 0.85rem;
+}
+
+.botao3,
+.botao4 {
+  width: 125px;
+  text-align: center;
+}
+
+.botao4 {
+  margin-left: 1rem;
+}
+
+.botao5 {
+  display: inline-block;
+  color: #fff;
+  background-color: #10b981;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 200px;
+  align-self: center;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+/* Rodapé */
+#rodape {
+  padding: 1.5rem;
+  background-color: #1e293b;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Cadastro autor */
+.formCadAutor h2 {
+  margin-bottom: 1rem;
+}
+
+.formCadAutor {
+  padding: 1rem;
+}
+
+.formCadAutor input {
+  display: block;
+}
+
+.formCadAutor input[type="text"],
+.formCadAutor select {
+  width: 400px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.formCadAutor select {
+  display: block;
+}
+
+/* Livros */
+.container-livros {
+  padding: 1rem;
+}
+
+.container-livros h2 {
+  margin-bottom: 1rem;
+}
+
+.container-livros .botao1 {
+  margin-bottom: 2rem;
+}
+
+.container-livros table {
+  border-collapse: collapse;
+}
+
+.container-livros th {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background-color: #3b82f6;
+}
+
+.container-livros td {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+}
+
+#formBtnDelete {
+  display: inline-block;
+}
+
+/* Cadastrar livros */
+#linkNovoAutor {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+/* Validação */
+
+.msg-erro {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1rem;
+}
+
+input.campo-erro,
+select.campo-erro {
+  border: 1px solid #ff4d4d;
+}
+
+/* Modal de confirmação */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  color: #080808;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.botao-confirmar {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.botao-cancelar {
+  background-color: #ccc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Mensagens de ação */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #28a745; /* Verde de sucesso */
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  right: 30px;
+  bottom: 30px;
+  font-size: 17px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#toast.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein { from {right: 0; opacity: 0;} to {right: 30px; opacity: 1;} }
+@keyframes fadeout { from {right: 30px; opacity: 1;} to {right: 0; opacity: 0;} }
