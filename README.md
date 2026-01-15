@@ -60,7 +60,7 @@ Este é um **Dynamic Web Project** desenvolvido no Eclipse. Siga os passos abaix
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/stefanopaulo/crud-acervo-livros](https://github.com/stefanopaulo/crud-acervo-livros.git)
+    git clone https://github.com/stefanopaulo/crud-acervo-livros.git
     ```
 2.  **Importe no Eclipse:**
     - Abra o Eclipse IDE.
