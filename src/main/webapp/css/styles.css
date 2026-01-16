@@ -266,7 +266,7 @@ select.campo-erro {
 #toast {
   visibility: hidden;
   min-width: 250px;
-  background-color: #28a745; /* Verde de sucesso */
+  background-color: #28a745;
   color: #fff;
   text-align: center;
   border-radius: 5px;
