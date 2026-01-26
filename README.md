@@ -56,8 +56,6 @@ Antes de avançar para as abstrações de alto nível proporcionadas pelo **Spri
 
 ## ⚙️ Como executar o projeto
 
-Este é um **Dynamic Web Project** desenvolvido no Eclipse. Siga os passos abaixo para rodar localmente:
-
 1.  **Clone o repositório:**
     
     ```bash
