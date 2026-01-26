@@ -39,3 +39,4 @@ work/
 
 # -- Dados de conexão ---
 src/main/resources/db.properties
+.smarttomcat

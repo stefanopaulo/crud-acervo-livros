@@ -59,22 +59,45 @@ Antes de avançar para as abstrações de alto nível proporcionadas pelo **Spri
 Este é um **Dynamic Web Project** desenvolvido no Eclipse. Siga os passos abaixo para rodar localmente:
 
 1.  **Clone o repositório:**
+    
     ```bash
     git clone https://github.com/stefanopaulo/crud-acervo-livros.git
     ```
-2.  **Importe no Eclipse:**
-    - Abra o Eclipse IDE.
-    - Vá em `File > Import... > General > Existing Projects into Workspace`.
-    - Selecione a pasta do projeto clonado.
-3.  **Configuração de Bibliotecas:**
-    - Certifique-se de que os arquivos `.jar` (MySQL Driver e iText) estão na pasta `WEB-INF/lib`.
-    - Caso as bibliotecas não sejam reconhecidas, clique com o botão direito no projeto > `Build Path > Configure Build Path` e verifique as bibliotecas em `Web App Libraries`.
-4.  **Banco de Dados:**
-    - Execute os scripts SQL da pasta `/sql` no seu MySQL (Criação e Povoamento).
-    - Verifique a classe `br.com.biblioteca.util.Conexao` para ajustar o usuário e senha do seu banco local.
-5.  **Servidor:**
-    - Clique com o botão direito no projeto > `Run As > Run on Server`.
-    - Selecione o **Apache Tomcat 10**.
+    
+2.  **Build do projeto com Maven:**
+    - Na raiz do projeto, execute:
+
+    ```bash
+    mvn clean package
+    ```
+
+3. **Banco de Dados:**
+
+    - Execute os scripts SQL disponíveis na pasta `/sql` (criação e povoamento).
+    - Crie um arquivo chamado `db.properties` no diretório:
+      ```
+      src/main/resources
+      ```
+    - Exemplo de configuração (utilize valores compatíveis com seu ambiente local):
+      ```properties
+      driver=com.mysql.cj.jdbc.Driver
+      url=jdbc:mysql://127.0.0.1:3306/[seu_banco_aqui]?useTimezone=true&serverTimezone=UTC
+      user=[seu_usuario]
+      password=[sua_senha]
+      ```
+    - A aplicação carrega automaticamente essas configurações no momento da conexão com o banco de dados.
+    
+4. **Deploy no Tomcat:**
+
+    - Copie o arquivo .war gerado para a pasta webapps do Tomcat
+   
+    ou
+    
+    - Configure o projeto em uma IDE de sua preferência utilizando um servidor Tomcat.
+    - Inicie o Tomcat
+
+5. **Acesse à aplicação:**
+
     - Acesse no navegador: `http://localhost:8080/acervo-livros`
 
 ---
